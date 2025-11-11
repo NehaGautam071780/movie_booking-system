@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #3b3e41, #c9daf0);
+  color: #161616;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 22px;
+  background: rgba(163, 154, 154, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(147, 148, 140, 0.6);
+}
+header h1 {
+  margin: 0 0 12px 0;
+  color: #0f172a;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Bigger cards */
+  gap: 30px;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+.movie-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 4px solid #0f0f0f; /* Thicker border */
+  padding: 16px;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 260px; /* Bigger image height */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.movie-card h3 {
+  font-size: 20px;
+  color: #111;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.movie-card button {
+  background: #353e4e;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.movie-card button:hover {
+  background: #1e2330;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #0ea5a6;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+button.secondary {
+  background: #ef4444;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px 0;
+  border-radius: 8px;
+  border: 1px solid #e6eef6;
+}
+
+/* Admin forms */
+.form-row {
+  margin-bottom: 12px;
+}
+
+/* Seat map */
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  max-width: 640px;
+  margin: 12px auto;
+}
+.seat {
+  padding: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  font-weight: 600;
+  color: #0f172a;
+}
+.seat.selected {
+  background: #10b981;
+  color: #fff;
+  border-color: #059669;
+}
+.seat.taken {
+  background: #6b7280;
+  color: #fff;
+  cursor: not-allowed;
+  border-color: #4b5563;
+}
+
+/* tables */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.table th,
+.table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eef2f6;
+  text-align: left;
+}
+
+/* small screens */
+@media (max-width: 600px) {
+  .movie-card img {
+    height: 180px;
+  }
+  .seat-map {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Auth page styles */
+.hidden {
+  display: none;
+}
+
+.toggle-link {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+  color: #0ea5a6;
+}

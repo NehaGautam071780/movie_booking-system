@@ -1,0 +1,11 @@
+Booking Receipt
+
+Booking ID: 50
+Movie: Shaitaan
+Seats: A4,D4
+Booked at: 26 Oct 2025, 17:06
+Amount: Rs. Rs.
+Warning: Undefined array key "total_amount" in D:\xampp\htdocs\movie_booking_system\movie_booking_system\user_history.php on line 390
+0
+
+Thank you!
